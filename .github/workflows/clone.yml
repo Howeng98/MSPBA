@@ -1,4 +1,4 @@
-name: GitHub Clone Count Update Every 15mins
+name: MSPBA Clone Count Track
 
 on:
   schedule:
