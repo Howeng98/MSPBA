@@ -1,4 +1,11 @@
 # Multi-Scale Patch-Based Representation Learning for Image Anomaly Detection and Segmentation ([paper link](https://openaccess.thecvf.com/content/WACV2022/html/Tsai_Multi-Scale_Patch-Based_Representation_Learning_for_Image_Anomaly_Detection_and_Segmentation_WACV_2022_paper.html), published in WACV 2022)
+
+<p align="center">
+    <img alt="ViewCount" src="https://views.whatilearened.today/views/github/howeng98/MSPBA.svg">
+    <a href='https://github.com/howeng98/MSPBA'><img alt='GitHub Clones' src='https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.githubusercontent.com/Howeng98/cbb010a4bc31a1d14b7d49c1d836635d/raw/clone.json&logo=github'></a>
+</p>
+
+
 *Authors - Chin-Chia Tsai, Tsung-Hsuan Wu, Shang-Hong Lai*
 
 ![image](https://user-images.githubusercontent.com/10960400/190884447-d513415f-13d3-4a28-ad0d-89b828c3fa0a.png)
