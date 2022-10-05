@@ -7,6 +7,8 @@
 
 
 *Authors - Chin-Chia Tsai, Tsung-Hsuan Wu, Shang-Hong Lai*
+ 
+[Original Repository Link](https://github.com/chinchia/Defect-Detection)
 
 ![image](https://user-images.githubusercontent.com/10960400/190884447-d513415f-13d3-4a28-ad0d-89b828c3fa0a.png)
 
