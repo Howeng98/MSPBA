@@ -34,16 +34,20 @@ args = parser.parse_args()
 device = 'cuda'
 torch.backends.cudnn.benchmark = True
 
-
 # logging AUROC results
 newline = '\n'
+if not os.path.isdir(f'./log_result'):
+    os.mkdir(f'./log_result')
+if not os.path.isdir(f'./ckpts'):
+    os.mkdir(f'./ckpts')
+
 LOG = f'./log_result/AUROC_{args.obj}.log'
 logging.basicConfig(filename=LOG, filemode="w", level=logging.INFO)
 logging.info(f' [class:{args.obj}, lambda:{args.lambda_value}, learning rate:{args.lr}, total training epochs:{args.epochs}, groups_64:{args.groups_64}, groups_32:{args.groups_32}, groups_16:{args.groups_16}]{newline}{newline}')
 
 
-if not os.path.isdir(f'ckpts/{args.obj}'):
-    os.mkdir(f'ckpts/{args.obj}')
+if not os.path.isdir(f'./ckpts/{args.obj}'):
+    os.mkdir(f'./ckpts/{args.obj}')
 
 
 def train():
@@ -73,7 +77,7 @@ def train():
         opt = torch.optim.Adam(params=params, lr=lr)
 
     with task('Datasets'):
-        train_x = mvtecad.get_x_standardized(obj, mode='train')
+        train_x = mvtecad.get_x_standardized(obj, mode='train')        
         train_x = NHWC2NCHW(train_x)
 
         rep = 100

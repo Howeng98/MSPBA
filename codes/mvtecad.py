@@ -6,10 +6,9 @@ from glob import glob
 from sklearn.metrics import roc_auc_score, precision_recall_curve, roc_curve
 
 
-DATASET_PATH = '/home/ginger/mvtec_anomaly_detection'
+DATASET_PATH = '../MvTecAD/'
 
-
-__all__ = ['objs', 'set_root_path',
+__all__ = ['objs', 
            'get_x', 'get_x_standardized',
            'detection_auroc', 'segmentation_auroc']
 
@@ -17,11 +16,10 @@ objs = ['bottle', 'cable', 'capsule', 'carpet', 'grid', 'hazelnut',
         'leather', 'metal_nut', 'pill', 'screw', 'tile', 'toothbrush',
         'transistor', 'wood', 'zipper']
 
-
 def resize(image, shape=(256, 256)):
     return np.array(Image.fromarray(image).resize(shape[::-1]))
 
-        
+
 def bilinears(images, shape) -> np.ndarray:
     import cv2
     N = images.shape[0]
@@ -39,14 +37,9 @@ def gray2rgb(images):
     return images
 
 
-def set_root_path(new_path):
-    global DATASET_PATH
-    DATASET_PATH = new_path
-
-
 def get_x(obj, mode='train'):
-    fpattern = os.path.join(DATASET_PATH, f'{obj}/{mode}/*/*.png')
-    fpaths = sorted(glob(fpattern))
+    fpattern = os.path.join(DATASET_PATH, f'{obj}/{mode}/*/*.png')    
+    fpaths = sorted(glob(fpattern))    
 
     if mode == 'test':
         fpaths1 = list(filter(lambda fpath: os.path.basename(os.path.dirname(fpath)) != 'good', fpaths))
@@ -62,13 +55,12 @@ def get_x(obj, mode='train'):
     if images.shape[-1] != 3:
         images = gray2rgb(images)
     images = list(map(resize, images))
-    images = np.asarray(images)
-    
+    images = np.asarray(images)    
     return images
 
 
 def get_x_standardized(obj, mode='train'):
-    x = get_x(obj, mode=mode)
+    x = get_x(obj, mode=mode)    
     mean = get_mean(obj)
     return (x.astype(np.float32) - mean) / 255
 
