@@ -2,11 +2,13 @@
 
 <p align="left">
     <img alt="ViewCount" src="https://views.whatilearened.today/views/github/howeng98/MSPBA.svg">
-    <a href='https://github.com/howeng98/MSPBA'><img alt='GitHub Clones' src='https://img.shields.io/badge/dynamic/json?color=success&label=clones&query=count&url=https://gist.githubusercontent.com/Howeng98/cbb010a4bc31a1d14b7d49c1d836635d/raw/clone.json&logo=github'></a>
+    <a href='https://github.com/howeng98/MSPBA'><img alt='GitHub Clones' src='https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.githubusercontent.com/Howeng98/d6d581667cb1cd94ddf763309b8c4cce/raw/clone.json&logo=github'></a>
 </p>
 
 
 *Authors - Chin-Chia Tsai, Tsung-Hsuan Wu, Shang-Hong Lai*
+ 
+[Original Repository Link](https://github.com/chinchia/Defect-Detection)
 
 ![image](https://user-images.githubusercontent.com/10960400/190884447-d513415f-13d3-4a28-ad0d-89b828c3fa0a.png)
 
