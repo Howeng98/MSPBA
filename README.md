@@ -32,7 +32,11 @@ Set the [DATASET_PATH](https://github.com/chinchia/Defect-Detection/blob/12520d5
 
 #### Step 2. Training.
 ```
-python main_train.py --obj=bottle --lr=1e-5 --lambda_value=1e-3 --D=64
+python3 main_train.py --obj=bottle --lr=1e-5 --lambda_value=1e-3 --D=64
+```
+or 
+```
+python3 main_train.py
 ```
 
 ```obj``` denotes the name of the class in MVTec AD dataset.<br />
@@ -45,7 +49,7 @@ python main_train.py --obj=bottle --lr=1e-5 --lambda_value=1e-3 --D=64
 
 #### Step 3. Testing and get anomaly maps.
 ```
-python main_visualize.py --obj=bottle
+python3 main_visualize.py --obj=bottle
 ```
 
 ```obj``` denotes the name of the class in MVTec AD dataset.
